@@ -242,7 +242,7 @@ def main():
     init_db()
     
     # ضع توكن البوت هنا
-    application = Application.builder().token("YOUR_BOT_TOKEN_HERE").build()
+    application = Application.builder().token("7713309109:AAGHzUo4II7qhzTKCsrO33cQ-2x0GTupQq0").build()
     
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CallbackQueryHandler(button_handler))
