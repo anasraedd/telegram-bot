@@ -16,7 +16,7 @@ def init_db():
     conn.close()
 
 # معرف المالك (ضع معرفك هنا)
-OWNER_ID = 123456789  # غيّر هذا الرقم بمعرف تيليجرام الخاص بك
+OWNER_ID = 7405584377  # غيّر هذا الرقم بمعرف تيليجرام الخاص بك
 
 # بداية البوت
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
