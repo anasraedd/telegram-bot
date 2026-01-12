@@ -209,33 +209,7 @@ async def save_rating(achievement_id: int, rating: int, notes: str):
     conn.close()
 
 # إرسال بطاقة الإنجاز للطالب
-async def send_achievement_card(context: ContextTypes.DEFAULT_TYPE, achievement_id: int):
-    conn = sqlite3.connect('bot_data.db')
-    c = conn.cursor()
-    c.execute('SELECT * FROM achievements WHERE id = ?', (achievement_id,))
-    achievement = c.fetchone()
-    conn.close()
-    
-    if achievement:
-        card = f'''
-🎉 تم تقييم إنجازك!
-
-📋 النوع: {achievement}
-📖 السورة: {achievement}
-🔢 من الآية {achievement} إلى الآية {achievement}
-
-⭐ التقييم: {"⭐" * achievement}
-
-💬 ملاحظات المعلم:
-{achievement}
-
-بارك الله في جهودك! 🌟
-'''
-        
-        await context.bot.send_message(
-            chat_id=achievement,
-            text=card
-        )
+ر
 
 # تشغيل البوت
 def main():
