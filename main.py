@@ -56,7 +56,7 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif query.data.startswith('rate_'):
         # تقييم الإنجاز
         parts = query.data.split('_')
-        achievement_id = int(parts)
+       achievement_id = int(parts [1])
         rating = int(parts)
         
         context.user_data['rating_achievement_id'] = achievement_id
@@ -198,7 +198,7 @@ async def notify_teacher(context: ContextTypes.DEFAULT_TYPE, achievement_id: int
         )
 
 # حفظ التقييم
-async def save_rating(achievement_id: int, rating: int, notes: str):
+async def save_rating(achievement_id: int, rating: int(parts [2]), notes: str):
     conn = sqlite3.connect('bot_data.db')
     c = conn.cursor()
     c.execute('''UPDATE achievements 
